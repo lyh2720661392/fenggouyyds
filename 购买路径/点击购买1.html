@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <style>
+        /* 设置全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .s-page-1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .s-section-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .image1 {
+            position: absolute;
+            top: 35%;  /* 图片1的顶部位置 */
+            left: 28%;  /* 图片1的左侧位置 */
+            width: 300px;  /* 图片1的宽度 */
+            height: 300px;  /* 图片1的高度 */
+        }
+
+        .image2 {
+            position: absolute;
+            bottom: 27%;  /* 图片2的底部位置 */
+            right: 30%;  /* 图片2的右侧位置 */
+            width: 300px;  /* 图片2的宽度 */
+            height: 300px;  /* 图片2的高度 */
+        }
+
+        .zi {
+            position: absolute;
+            top: 0%;  /* 字体1的顶部位置 */
+            left: 5%;  /* 字体1的左侧位置 */
+            width: 100%;  /* 字体1的宽度 */
+            height: 300px;  /* 字体1的高度 */
+            font-family: 宋体;
+            color: aliceblue;
+        }
+
+        .zi1 {
+            position: absolute;
+            top: 35%;  /* 字体1的顶部位置 */
+            left: 5%;  /* 字体1的左侧位置 */
+            width: 300px;  /* 字体1的宽度 */
+            height: 300px;  /* 字体1的高度 */
+            font-family: 宋体;
+            font-size: 10px;
+            color: aliceblue;
+        }
+        .zi2 {
+            position: absolute;
+            bottom: 27%;  /* 字体1的顶部位置 */
+            right: 5%;  /* 字体1的左侧位置 */
+            width: 300px;  /* 字体1的宽度 */
+            height: 300px;  /* 字体1的高度 */
+            font-family: 宋体;
+            color: aliceblue;
+        }
+
+        .sp1 {
+            position: absolute;
+            top: 95%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            width: 50%; /* 根据需要调整宽度 */
+            max-width: 400px; /* 视频的最大宽度 */
+            height: auto;
+        }
+
+        .sp2 {
+            position: absolute;
+            top: 95%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            width: 50%; /* 根据需要调整宽度 */
+            max-width: 400px; /* 视频的最大宽度 */
+            height: auto;
+        }
+
+        .zi3 {
+            position: absolute;
+            top: 108%;  /* 字体1的顶部位置 */
+            left: 12%;  /* 字体1的左侧位置 */
+            width: 200px;  /* 字体1的宽度 */
+            height: 20px;  /* 字体1的高度 */
+            font-family: 宋体;
+            color: aliceblue;
+        }
+
+        .zi4 {
+            position: absolute;
+            top: 108%;  /* 字体1的顶部位置 */
+            left: 74%;  /* 字体1的左侧位置 */
+            width: 200px;  /* 字体1的宽度 */
+            height: 20px;  /* 字体1的高度 */
+            font-family: 宋体;
+            color: aliceblue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="s-page-1">
+        <div class="s-section-1">
+            <!-- 此处放置页面内容 -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+    <script>
+        var setVanta = () => {
+            if (window.VANTA) {
+                window.VANTA.DOTS({
+                    el: ".s-page-1 .s-section-1",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    showDots: false,  // 是否显示点
+                    color: 0x477de,
+                    showLines: false,
+                });
+            }
+        };
+        document.addEventListener("DOMContentLoaded", function() {
+            setVanta();
+            window.edit_page.Event.subscribe("Page.beforeNewOneFadeIn", setVanta);
+        });
+    </script>
+
+    <div class="image-container">
+        <img src="image1/微信二维码.jpg" alt="Image 1" class="image1">
+        <img src="image1/支付款.jpg" alt="Image 2" class="image2">
+    </div>
+    <div class="zi">
+        <h1>下单方式：</h1>
+        <p>一、可添加下方微信，质询后下单，可添加微信合作（招代理中）</p>
+        <p>加微信下单可购买软件或质询问题！！！</p>
+        <p>二、可直接下单付款，下单时需备注：</p>
+        <p>刷课账号密码（请自己尝试登录成功后下单，以免密码错误！导致不便!）和需刷课的课程名单（如：xxx课程；xxx课程）</p>
+        <p>有问题请添加下方微信联系解决（工作时间：8：00-12：00  14：00-22：00）</p>
+    </div>
+    <div class="zi1">
+        <h2>软件使用说明：</h2>
+        <p>先解压到桌面，然后秘钥是1，登录选如自己需要刷的课程，直接全选然</p>
+        <p>后启动，刷课中途不要登录查看，如果遇见卡住进度条就重新打开，或者</p>
+        <p>观看第二个视频稳定模式的使用方法（长时间卡在那个数字不变动就是卡</p>
+        <p>住了）！最重要的就是：“虽然可以刷到百分之百，但是不能答题和自动</p>
+        <p>回复讨论，需自行完成答题和讨论！！！不做可能导致分不够！！！</p>
+        <p>下方有视频介绍</p>
+        <h6>温馨提示：</h6>
+        <p>如若不仔细阅读，出现问题，本店概不负责！！！</p>
+    </div>
+    <div class="zi2">
+        <h2>价格说明:</h2> <!-- 商品描述 -->
+        <p>刷课软件：15圆子（30天可用期）</p>
+        <p>无限制软甲：80圆子无账号限制，可更换账号登录（30天可用期，配备答案！可找作者录答案）</p>
+        <p>一条龙刷课：一门课程5圆子（视频+章节测试（100%准确率）+作业）</p>
+    </div>
+
+    <video src="image1/高校视频/解压使用.mp4" class="sp1" controls></video>
+    <video src="image1/高校视频/稳定模式使用.mp4" class="sp2" controls></video>
+    <div class="zi3">
+        <h1>软件解压使用</h1>
+    </div>
+    <div class="zi4">
+        <h1>稳定模式使用</h1>
+    </div>
+
+</body>
+</html>

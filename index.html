@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <body>
+        <div id="s-page-1"></div>
+    
+        <script src="背景js文件/three.min.js"></script>
+        <script src="背景js文件/vanta.birds.min.js"></script>
+        <script>
+            // 在页面加载完成后运行初始化函数
+            window.addEventListener('load', function() {
+                // 使用 Vanta.js 创建背景效果
+                VANTA.BIRDS({
+                    el: '#s-page-1',  // 指定要应用背景效果的元素
+                    backgroundColor: 0x7192f,  // 设置背景颜色（浅黄色）
+                    color1: 0xff0000,  // 设置鸟群的颜色
+                    color2: 0xd1ff,  // 设置鸟群的颜色
+                    birdSize: 1.00,  // 设置鸟的大小
+                    wingSpan: 20.00  // 设置鸟的翼展
+                    // 可以根据需要设置其他参数
+                });
+            });
+        </script>
+    </body>
+    <style>
+        /* 设置全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #s-page-1{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .frame {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            color: aliceblue;
+        }
+
+        .frame p {
+            margin: 0;
+            font-size: 50px; /* 字体大小像素 */
+            font-weight: bold; /* 字体粗细为粗体 */
+            font-family: 宋体; /* 字体样式为宋体 */
+            overflow: hidden; /* 将溢出内容隐藏 */
+            text-align: center; /* 文本水平居中 */
+        }
+
+        /* 设置商品样式 */
+        .product {
+            margin: 3% 0;
+            padding: 0 5%;
+            text-align: center;
+        }
+
+        .product img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .product .title {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 宋体;
+            color: red;
+        }
+
+        .product .description {
+            margin-top: 10px;
+            font-size: 16px;
+            font-family: 宋体;
+            color: aliceblue;
+        }
+
+        /* 设置媒体查询 */
+        @media screen and (max-width: 600px) {
+            /* 在小屏幕上调整商品排列方式 */
+            .product {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <p>欢迎光临本店，店面平平无奇，功能强大</p> <!-- LOGO文字居中显示 -->
+    </div>
+
+    <!-- 预览图片 -->
+    <div>
+        <img src="image/未标题-1.jpg" alt="预览图片" width="100%" height="300">
+    </div>
+
+    <!-- 商品1 -->
+    <div class="product">
+        <img src="image/重庆高等教育平台.jpg" alt="商品图片">
+        <div>
+            <a href="购买路径/点击购买1.html" class="title">点击购买1</a> <!-- 商品标题 -->
+        </div>
+        <div class="description">
+            <h2>刷课:</h2> <!-- 商品描述 -->
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <h2>下单须知：</h2>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+        </div>
+    </div>
+
+    <!-- 商品2 -->
+    <div class="product">
+        <img src="image/LOGO 拷贝.jpg" alt="商品图片">
+        <div>
+            <a href="购买路径/点击购买2.html" class="title">点击购买2</a> <!-- 商品标题 -->
+        </div>
+        <div class="description">
+            <h2>刷课:</h2> <!-- 商品描述 -->
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <h2>下单须知：</h2>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+        </div>
+    </div>
+
+    <!-- 商品3 -->
+    <div class="product">
+        <img src="image/LOGO 拷贝.jpg" alt="商品图片">
+        <div>
+            <a href="购买路径/点击购买3.html" class="title">点击购买3</a> <!-- 商品标题 -->
+        </div>
+        <div class="description">
+            <h2>刷课:</h2> <!-- 商品描述 -->
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <h2>下单须知：</h2>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+        </div>
+    </div>
+
+    <!-- 商品4 -->
+    <div class="product">
+        <img src="image/LOGO 拷贝.jpg" alt="商品图片">
+        <div>
+            <a href="购买路径/点击购买4.html" class="title">点击购买4</a> <!-- 商品标题 -->
+        </div>
+        <div class="description">
+            <h2>刷课:</h2> <!-- 商品描述 -->
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+            <h2>下单须知：</h2>
+            <p>刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍刷课介绍</p>
+        </div>
+    </div>
+    
+    <div id="your-element-selector"></div>
+</body>
+</html>
